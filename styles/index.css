@@ -1,0 +1,365 @@
+/* Slider Styling */
+#slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Centered Logo in Slider */
+#slider-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  transition: opacity 0.6s ease-in-out;
+}
+
+#logo-text-slider {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Navbar Logo Scroll Effect */
+#top-bar {
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+.logo-container {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.scrolled .logo-container {
+  opacity: 1;
+}
+
+.scrolled #slider-logo {
+  opacity: 0;
+}
+
+/* Video Mute Button */
+ .mute-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.mute-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+} 
+
+/* Hambuger Icon */
+        /* Hamburger Container */
+        .hamburger {
+          width: 25px;
+          height: 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          position: relative;
+      }
+      /* Common style for bars (Thinner lines) */
+      .hamburger span {
+          display: block;
+          height: 2px; 
+          background-color: black;
+          transition: 0.4s ease-in-out;
+          position: absolute;
+      }
+
+      /* Default positions */
+      .hamburger span:nth-child(1) { 
+          top: 0;
+      }
+      .hamburger span:nth-child(2) {  
+          top: 50%; 
+          transform: translateY(-50%); 
+          width: 60%; 
+      }
+      .hamburger span:nth-child(3) { 
+          bottom: 0; 
+      }
+
+      /* Transform to "H" */
+      .hamburger.active span:nth-child(1) {
+          width: 2px; /* Match thin width */
+          height: 100%;
+          top: 0;
+          left: 0px;
+          transition: left 0.4s ease-in, height 0.4s ease-in;
+      }
+      .hamburger.active span:nth-child(3) {
+          width: 2px; /* Match thin width */
+          height: 100%;
+          bottom: 0;
+          right: 0px;
+          transition: right 0.4s ease-in, height 0.4s ease-in;            
+      }
+
+  /* Closing animation (reverse the transformation) */
+  .hamburger:not(.active) span:nth-child(1) {
+      height: 2px; /* Match thin width */
+      width: 100%;
+      top: 0;
+      left: 0px;
+      transition: left 0.4s ease-in, height 0.4s ease-in;
+  }
+
+  .hamburger:not(.active) span:nth-child(3) {
+      height: 2px; /* Match thin width */
+          width: 100%;
+          bottom: 0;
+          right: 0px;
+          transition: right 0.4s ease-in, height 0.4s ease-in;   
+  }
+
+  /* Smooth transition for closing animation */
+  .hamburger span {
+      transition: all 0.4s ;
+  }
+  /* Side-bar-start */
+.Hside-bar {
+  top: 10%;
+  width: 30vw;
+  position: fixed;
+  left: -30%;
+  height: 100vh;
+  padding-top: 10px;
+  background: rgb(255, 255, 255);
+  transition: left 0.3s ease-in-out;
+  position: absolute;
+  z-index: 1000001;
+}
+
+/* Activate Sidebar */
+.Hside-bar.active {
+  left: 0;
+}
+
+/* Category Container */
+.Hcategory {
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: relative; 
+}
+
+/* Category Items */
+.Hcategory span {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Hover Effect */
+.Hcategory span:hover {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  text-decoration: underline;
+}
+
+/* Dropdown Styling - Full Width of Sidebar */
+.Hdropdown {
+  position: fixed; 
+  top: auto;
+  left: -30%; 
+  width: 30%; 
+  border-radius: 5px;
+  list-style: none;
+  text-align: left;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.Hside-bar.active .Hdropdown {
+  left: 0; 
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dropdown Links */
+.Hdropdown a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.Hdropdown a:hover {
+  transform: scale(1.02);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  text-decoration: underline;
+
+}
+
+/* Category Section Inside Dropdown */
+.Hdropdown-category {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.Hdropdown-category a{
+  padding-left: 45px;
+
+}
+.Hdropdown-category strong {
+  display: block;
+  padding: 5px 12px;
+  color: darkblue;
+  text-transform:uppercase;
+}
+
+/* Show Dropdown on Hover */
+.Hcategory-item {
+  position: relative;
+}
+
+.Hcategory-item:hover .Hdropdown {
+  display: block;
+}
+
+.Hside-bar.active .Hcategory-item:first-child  .Hdropdown {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .Hside-bar, .Hdropdown {
+      width: 30vw;
+      left: -30vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .Hside-bar, .Hdropdown {
+      width: 40vw;
+      left: -40vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .Hside-bar, .Hdropdown {
+      width: 55vw;
+      left: -55vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .Hside-bar, .Hdropdown {
+      width: 80vw;
+      left: -80vw;
+  }
+}
+
+/* Side-Bar Ends */
+    .bi-whatsapp:hover{
+      color: rgb(154, 219, 55);
+    }
+    .bi-linkedin:hover {
+        color: #0077b5 !important; /* LinkedIn Blue */
+    }
+
+    .bi-facebook:hover {
+        color: #1877f2 !important; /* Facebook Blue */
+    }
+
+    .bi-instagram:hover {
+        color: #e4405f !important; /* Instagram Pinkish */
+    }
+
+    /* .bi-twitter:hover {
+        color: #1da1f2 !important; 
+    } */
+    .fa-x-twitter:hover{
+      color: black !important;
+    }
+    .bi-youtube:hover {
+        color: #ff0000 !important; /* YouTube Red */
+    }
+
+    .bi-pinterest:hover {
+        color: #e60023 !important; /* Pinterest Red */
+    }
+.c-home{
+  /* background-color: pink; */
+  position: relative;  
+  text-align: center;  
+
+}
+  .c-icon {
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 50%;
+    border-right-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative; 
+    margin: auto; 
+  }
+
+ /* Rotate C icon on hover */
+ .c-icon:hover {
+  transform: rotate(360deg);
+}
+
+/* Social Icons - Initially hidden */
+.c-social-icons {
+  position: absolute;
+  top: 120%; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background-color:transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  visibility: hidden; 
+  pointer-events: none; 
+}
+
+.c-home:hover .c-social-icons {
+  opacity: 1;
+  visibility: visible;  
+  pointer-events: auto;
+}
+
+.c-social-link{
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
