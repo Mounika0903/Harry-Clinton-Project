@@ -1,3 +1,4 @@
+
 /* Slider Styling */
 #slider {
   position: relative;
@@ -137,146 +138,165 @@
       transition: all 0.4s ;
   }
   /* Side-bar-start */
-.Hside-bar {
-  top: 10%;
-  width: 30vw;
-  position: fixed;
-  left: -30%;
-  height: 100vh;
-  padding-top: 10px;
-  background: rgb(255, 255, 255);
-  transition: left 0.3s ease-in-out;
-  position: absolute;
-  z-index: 1000001;
-}
-
-/* Activate Sidebar */
-.Hside-bar.active {
-  left: 0;
-}
-
-/* Category Container */
-.Hcategory {
-  display: flex; 
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  position: relative; 
-}
-
-/* Category Items */
-.Hcategory span {
-  flex: 1;
-  text-align: center;
-  padding: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  position: relative;
-}
-
-/* Hover Effect */
-.Hcategory span:hover {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-  text-decoration: underline;
-}
-
-/* Dropdown Styling - Full Width of Sidebar */
-.Hdropdown {
-  position: fixed; 
-  top: auto;
-  left: -30%; 
-  width: 30%; 
-  border-radius: 5px;
-  list-style: none;
-  text-align: left;
-  z-index: 100;
-  opacity: 0;
-  visibility: hidden;
-  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.Hside-bar.active .Hdropdown {
-  left: 0; 
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Dropdown Links */
-.Hdropdown a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: black;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.Hdropdown a:hover {
-  transform: scale(1.02);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  text-decoration: underline;
-
-}
-
-/* Category Section Inside Dropdown */
-.Hdropdown-category {
-  margin-top: 10px;
-  padding-top: 10px;
-}
-
-.Hdropdown-category a{
-  padding-left: 45px;
-
-}
-.Hdropdown-category strong {
-  display: block;
-  padding: 5px 12px;
-  color: darkblue;
-  text-transform:uppercase;
-}
-
-/* Show Dropdown on Hover */
-.Hcategory-item {
-  position: relative;
-}
-
-.Hcategory-item:hover .Hdropdown {
-  display: block;
-}
-
-.Hside-bar.active .Hcategory-item:first-child  .Hdropdown {
-  display: block;
-}
-
-@media (max-width: 1200px) {
-  .Hside-bar, .Hdropdown {
-      width: 30vw;
-      left: -30vw;
+  .Hside-bar {
+    top: 9%;
+    width: 30vw;
+    position: fixed;
+    left: -30%;
+    height: 100vh;
+    padding-top: 10px;
+    background: rgb(255, 255, 255);
+    /* background-color: lightpink; */
+    /* backdrop-filter: blur(15px);  */
+    transition: left 0.3s ease-in-out;
+    /* position: absolute; */
+    z-index: 1000001;
   }
-}
-
-@media (max-width: 992px) {
-  .Hside-bar, .Hdropdown {
-      width: 40vw;
-      left: -40vw;
+  
+  /* Activate Sidebar */
+  .Hside-bar.active {
+    left: 0;
   }
-}
-
-@media (max-width: 768px) {
-  .Hside-bar, .Hdropdown {
-      width: 55vw;
-      left: -55vw;
+  
+  /* Category Container */
+  .Hcategory {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* padding: 10px; */
+    /* background-color: #ddd; */
+    position: relative; 
   }
-}
-
-@media (max-width: 480px) {
-  .Hside-bar, .Hdropdown {
-      width: 80vw;
-      left: -80vw;
+  
+  
+  
+  
+  
+  /* Category Items */
+  .Hcategory span {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
   }
-}
-
+  
+  /* Hover Effect */
+  .Hcategory span:hover {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    text-decoration: underline;
+  }
+  
+  /* Dropdown Styling - Full Width of Sidebar */
+  .Hdropdown {
+    position: fixed; 
+    top: auto;
+    left: -30%;  /* Initially hidden */
+    width: 30%;  /* Same width as sidebar */
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); */
+    border-radius: 5px;
+    list-style: none;
+    text-align: left;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  
+  .Hside-bar.active .Hdropdown {
+    left: 0;  /* Slide in with sidebar */
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Dropdown Links */
+  .Hdropdown a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .Hdropdown a:hover {
+    /* background-color: #ddd; */
+    transform: scale(1.02);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+  
+  }
+  
+  /* Category Section Inside Dropdown */
+  .Hdropdown-category {
+    margin-top: 10px;
+    padding-top: 10px;
+    /* border-top: 1px solid #ccc; */
+  }
+  
+  .Hdropdown-category a{
+    padding-left: 45px;
+  
+  }
+  .Hdropdown-category strong {
+    display: block;
+    padding: 5px 12px;
+    color: darkblue;
+    text-transform:uppercase;
+  }
+  
+  /* Show Dropdown on Hover */
+  .Hcategory-item {
+    position: relative;
+  }
+  
+  .Hcategory-item:hover .Hdropdown {
+    display: block;
+  }
+  
+  /* Ensure "Men" dropdown is visible when sidebar opens */
+  .Hside-bar.active .Hcategory-item:first-child  .Hdropdown {
+    display: block;
+  }
+  
+  @media (max-width: 1200px) {
+    .Hside-bar, .Hdropdown {
+        width: 30vw;
+        left: -30vw;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .Hside-bar, .Hdropdown {
+        width: 40vw;
+        left: -40vw;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Hside-bar, .Hdropdown {
+        width: 55vw;
+        left: -55vw;
+    }
+  
+    .Hcategory span {
+      padding: 5px;
+    }
+    
+  
+  }
+  
+  @media (max-width: 480px) {
+    .Hside-bar, .Hdropdown {
+        width: 80vw;
+        left: -80vw;
+    }
+  
+    
+  }
 /* Side-Bar Ends */
     .bi-whatsapp:hover{
       color: rgb(154, 219, 55);
@@ -363,3 +383,63 @@
   align-items: center;
   justify-content: center;
 }
+
+/* new */
+/* Running Bar */
+.running-bar {
+  position: fixed;
+  top: 60px; /* Adjust according to header height */
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 1px;
+  background-color: #dc3545; 
+  overflow: hidden;
+}
+
+/* Marquee Container */
+.marquee-container {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px; /* Adjusted height */
+}
+
+/* Marquee Text */
+.marquee {
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+  display: inline-block;
+  animation: marqueeMove 10s linear infinite;
+}
+
+/* Right-to-left scrolling effect */
+@keyframes marqueeMove {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+/* Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 15px;
+}
+#runningBar {
+  transition: all 0.5s ease-in-out; /* Smooth transition */
+}
+
