@@ -1,4 +1,3 @@
-
 /* Slider Styling */
 #slider {
   position: relative;
@@ -78,7 +77,6 @@
           cursor: pointer;
           position: relative;
       }
-      /* Common style for bars (Thinner lines) */
       .hamburger span {
           display: block;
           height: 2px; 
@@ -102,14 +100,14 @@
 
       /* Transform to "H" */
       .hamburger.active span:nth-child(1) {
-          width: 2px; /* Match thin width */
+          width: 2px; 
           height: 100%;
           top: 0;
           left: 0px;
           transition: left 0.4s ease-in, height 0.4s ease-in;
       }
       .hamburger.active span:nth-child(3) {
-          width: 2px; /* Match thin width */
+          width: 2px;
           height: 100%;
           bottom: 0;
           right: 0px;
@@ -118,7 +116,7 @@
 
   /* Closing animation (reverse the transformation) */
   .hamburger:not(.active) span:nth-child(1) {
-      height: 2px; /* Match thin width */
+      height: 2px;
       width: 100%;
       top: 0;
       left: 0px;
@@ -126,7 +124,7 @@
   }
 
   .hamburger:not(.active) span:nth-child(3) {
-      height: 2px; /* Match thin width */
+      height: 2px; 
           width: 100%;
           bottom: 0;
           right: 0px;
@@ -139,17 +137,15 @@
   }
   /* Side-bar-start */
   .Hside-bar {
-    top: 9%;
+    top: 7.6%;
     width: 30vw;
     position: fixed;
     left: -30%;
     height: 100vh;
     padding-top: 10px;
     background: rgb(255, 255, 255);
-    /* background-color: lightpink; */
-    /* backdrop-filter: blur(15px);  */
     transition: left 0.3s ease-in-out;
-    /* position: absolute; */
+   
     z-index: 1000001;
   }
   
@@ -164,8 +160,7 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    /* padding: 10px; */
-    /* background-color: #ddd; */
+  
     position: relative; 
   }
   
@@ -197,7 +192,6 @@
     top: auto;
     left: -30%;  /* Initially hidden */
     width: 30%;  /* Same width as sidebar */
-    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); */
     border-radius: 5px;
     list-style: none;
     text-align: left;
@@ -223,7 +217,6 @@
   }
   
   .Hdropdown a:hover {
-    /* background-color: #ddd; */
     transform: scale(1.02);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     text-decoration: underline;
@@ -234,7 +227,6 @@
   .Hdropdown-category {
     margin-top: 10px;
     padding-top: 10px;
-    /* border-top: 1px solid #ccc; */
   }
   
   .Hdropdown-category a{
@@ -299,7 +291,7 @@
   }
 /* Side-Bar Ends */
     .bi-whatsapp:hover{
-      color: rgb(154, 219, 55);
+      color: #25D366;
     }
     .bi-linkedin:hover {
         color: #0077b5 !important; /* LinkedIn Blue */
@@ -362,6 +354,7 @@
   transition: opacity 0.3s ease;
   visibility: hidden; 
   pointer-events: none; 
+ 
 }
 
 .c-home:hover .c-social-icons {
@@ -388,15 +381,16 @@
 /* Running Bar */
 .running-bar {
   position: fixed;
-  top: 60px; /* Adjust according to header height */
+  top: 45px;
   width: 100%;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1px 1px;
-  background-color: #dc3545; 
   overflow: hidden;
+  height: 25px;
+  background-color: black !important;
 }
 
 /* Marquee Container */
@@ -407,7 +401,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: 30px; /* Adjusted height */
+  height: 30px;
 }
 
 /* Marquee Text */
@@ -442,7 +436,3 @@
 #runningBar {
   transition: all 0.5s ease-in-out; /* Smooth transition */
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> bcadd8b (Updated index files and added sign-in/sign-up pages)

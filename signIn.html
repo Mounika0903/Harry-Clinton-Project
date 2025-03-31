@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body class="bg-light">
+   <!-- Home Button -->
+   <!-- <a href="index.html" class="position-absolute top-0 start-0 m-3 text-dark fs-4">
+    <i class="bi bi-chevron-left"></i> Home
+</a> -->
+<!-- Home Button  -->
+<a href="index.html" class="btn btn-clear position-absolute top-0 start-0 m-3">
+    <i class="bi bi-chevron-left"></i> Home
+</a>
 
     <div class="container vh-100 d-flex align-items-center justify-content-center">
         <div class="card p-4 shadow-lg border-0" style="max-width: 400px; width: 100%; border-radius: 12px;">
@@ -24,15 +32,14 @@
             </div>
 
             <form>
-                <div class="mb-3">
-                    <label class="form-label text-dark">Email Address</label>
-                    <input type="email" class="form-control border-secondary" placeholder="Enter your email" required>
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label text-dark">Password</label>
-                    <input type="password" class="form-control border-secondary" placeholder="Enter your password" required>
-                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control border-secondary" id="floatingInput" placeholder="name@example.com" >
+                    <label for="floatingInput">Email ID</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control border-secondary" id="floatingInput" placeholder="" >
+                    <label for="floatingInput">Password</label>
+                  </div>
 
                 <div class="d-flex justify-content-between mb-3">
                     <div>
