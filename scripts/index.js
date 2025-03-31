@@ -8,6 +8,23 @@ document.addEventListener("DOMContentLoaded", function () {
         const categoryItems = document.querySelectorAll(".Hcategory-item");
         const defaultDropdown = document.querySelector(".Hcategory-item:first-child .Hdropdown"); // "Men" dropdown
         let lastHoveredDropdown = defaultDropdown; // Store last hovered dropdown
+      
+        //Running bar
+        const closeBarBtn = document.getElementById("closeBar");
+        const runningBar = document.getElementById("runningBar");
+        
+        if (closeBarBtn && runningBar) {
+            closeBarBtn.addEventListener("click", function () {
+                console.log("Close button clicked! Hiding running bar...");
+                runningBar.style.visibility = "hidden"; // Hide the running bar
+                runningBar.style.opacity = "0"; // Smooth transition
+                runningBar.style.height = "0px"; // Collapse height
+                runningBar.style.overflow = "hidden"; // Prevents any remaining content visibility
+            });
+        } else {
+            console.error("Error: Close button or running bar not found!");
+        }
+        
 
         // Scroll Effect for Logo
         window.addEventListener("scroll", function () {
@@ -80,9 +97,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         });
-    
+
         // Reset dropdown to last hovered one when mouse leaves sidebar
         sideBar.addEventListener("mouseleave", function () {
             resetDropdowns();
         });    
     });  
+
+ 
