@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign In</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+
+    <div class="container vh-100 d-flex align-items-center justify-content-center">
+        <div class="card p-4 shadow-lg border-0" style="max-width: 400px; width: 100%; border-radius: 12px;">
+            
+            <div class="text-center">
+            <a href="index.html">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded-circle mb-3 border border-2" alt="Profile Avatar" width="80">
+            </a>
+                <h3 class="fw-bold text-dark">Sign In</h3>
+                <p class="text-secondary">Access your account</p>
+            </div>
+
+            <form>
+                <div class="mb-3">
+                    <label class="form-label text-dark">Email Address</label>
+                    <input type="email" class="form-control border-secondary" placeholder="Enter your email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-dark">Password</label>
+                    <input type="password" class="form-control border-secondary" placeholder="Enter your password" required>
+                </div>
+
+                <div class="d-flex justify-content-between mb-3">
+                    <div>
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe" class="small text-dark">Remember me</label>
+                    </div>
+                    <a href="#" class="small text-primary text-decoration-none">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-dark w-100 fw-bold">Sign In</button>
+            </form>
+
+            <p class="text-center mt-3">Don't have an account? <a href="signUp.html" class="text-primary fw-bold">Sign Up</a></p>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
