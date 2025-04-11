@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-        const topBar = document.getElementById("top-bar");
+        // const topBar = document.getElementById("top-bar");
+        // const sliderLogo = document.getElementById("slider-logo");
+        
+        const sidebar = document.getElementById("socialSidebar");
+        const toggleBtn = document.getElementById("toggleSidebar");
+        const chevron = document.getElementById("chevronIcon");
+      
+        const topBar = document.getElementById("logo-text");
         const sliderLogo = document.getElementById("slider-logo");
+        
         const video = document.getElementById("myVideo");
         const muteBtn = document.getElementById("mute-btn");
         const navIcon = document.getElementById("hamburger-menu");
@@ -8,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const categoryItems = document.querySelectorAll(".Hcategory-item");
         const defaultDropdown = document.querySelector(".Hcategory-item:first-child .Hdropdown"); // "Men" dropdown
         let lastHoveredDropdown = defaultDropdown; // Store last hovered dropdown
-      
+    
         //Running bar
         const closeBarBtn = document.getElementById("closeBar");
         const runningBar = document.getElementById("runningBar");
@@ -25,17 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("Error: Close button or running bar not found!");
         }
         
-
-        // Scroll Effect for Logo
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 100) {
-                topBar.classList.add("scrolled");
-                sliderLogo.style.opacity = "0";
-            } else {
-                topBar.classList.remove("scrolled");
-                sliderLogo.style.opacity = "1";
-            }
-        });
+      
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+        topBar.classList.remove("d-none");      // Show black text
+        sliderLogo.style.opacity = "0";         // Hide white text
+    } else {
+        topBar.classList.add("d-none");         // Hide black text
+        sliderLogo.style.opacity = "1";         // Show white text
+    }
+});
     
         // Mute/Unmute Video
         muteBtn.addEventListener("click", function () {
@@ -97,9 +104,32 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         });
+           
+            let isOpen = false;
+          
+            // Initial state: sidebar hidden
+            // sidebar.style.right = "-60px";
+            sidebar.style.setProperty("right", "-60px", "important");
 
-        // Reset dropdown to last hovered one when mouse leaves sidebar
-        sideBar.addEventListener("mouseleave", function () {
-            resetDropdowns();
-        });    
-    });  
+            toggleBtn.style.right = "0";
+
+            toggleBtn.addEventListener("click", () => {
+              if (isOpen) {
+                // Hide sidebar
+                sidebar.style.setProperty("right", "-60px", "important");
+                toggleBtn.style.right = "0";
+                chevron.classList.remove("fa-chevron-right");
+                chevron.classList.add("fa-chevron-left");
+              } else {
+                // Show sidebar
+                sidebar.style.setProperty("right", "0", "important");
+                toggleBtn.style.right = "60px";
+                chevron.classList.remove("fa-chevron-left");
+                chevron.classList.add("fa-chevron-right");
+              }
+          
+              // Toggle the state
+              isOpen = !isOpen;
+            });
+          });
+          

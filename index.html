@@ -22,97 +22,147 @@
 </head>
 <body>
 <!-- Top bar -->
-    <header id="top-bar" class="navbar fixed-top navbar-light bg-white shadow-sm py-1">
-        <div class="container d-flex justify-content-between align-items-center">
-            
+<header id="top-bar" class="navbar fixed-top navbar-light bg-white shadow-sm py-1">
+    <div class="container-fluid px-3">
+        <div class="row w-100 align-items-center justify-content-between">
+
             <!-- Left Icons -->
-            <div class="d-flex align-items-center gap-3">
+            <div class="col-auto d-flex align-items-center gap-3">
                 <div class="hamburger" id="hamburger-menu">
                     <span></span>
                     <span class="hamburger-center"></span>
                     <span></span>
                 </div>
-                <!-- C icon need to add-->
+
+                <!-- C icon + social -->
                 <span class="c-home">
-                    <!-- <div class="c-main-icon"></div> -->
-                    <div class="c-icon"></div> 
-        
-                     <div class="c-social-icons">
+                    <div class="c-icon"></div>
+                    <div class="c-social-icons">
                         <a href="https://wa.me/" target="_blank" class="c-social-link"><i class="fa-brands fa-whatsapp scale"></i></a>
                         <a href="https://facebook.com/" target="_blank" class="c-social-link"><i class="fab fa-facebook scale"></i></a>
                         <a href="https://instagram.com/" target="_blank" class="c-social-link"><i class="fab fa-instagram scale"></i></a>
                         <a href="https://linkedin.com/" target="_blank" class="c-social-link"><i class="fab fa-linkedin scale"></i></a>
-                    </div> 
-                   </span>
-                <i class="bi bi-search fs-4"></i>
-                <span class="d-none d-md-inline fs-5">Search</span>
+                    </div>
+                </span>
+
+                <!-- <i class="bi bi-search fs-4"></i>
+                <span class="d-none d-md-inline fs-5">Search</span> -->
+
+                <!-- <form class="d-flex align-items-center" role="search">
+                    <div class="input-group">
+                      <span class="input-group-text bg-white border-end-0">
+                        <i class="bi bi-search text-secondary"></i>
+                      </span>
+                      <input type="search" class="form-control border-start-0" placeholder="Search..." aria-label="Search">
+                    </div>
+                  </form> -->
+
+                  <!-- <form class="d-flex" role="search">
+                    <div class="input-group">
+                      <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                      <button class="btn btn-outline-secondary" type="submit">
+                        <i class="bi bi-search"></i>
+                      </button>
+                    </div>
+                  </form>
+                   -->
+
+                   <!-- <div class="d-flex align-items-center">
+                    <button class="btn btn-outline-secondary p-2 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#searchCollapse" aria-expanded="false" aria-controls="searchCollapse">
+                      <i class="bi bi-search fs-5"></i>
+                    </button>
+                    <div class="collapse" id="searchCollapse">
+                      <input type="text" class="form-control" placeholder="Search..." style="width: 200px;">
+                    </div>
+                  </div> -->
+
+               
+<!-- search bar -->
+<div class="d-flex align-items-center">
+  <a href="#" data-bs-toggle="collapse" data-bs-target="#searchCollapse" aria-expanded="false" aria-controls="searchCollapse" class="text-dark text-decoration-none">
+    <i class="bi bi-search fs-4"></i>
+  </a>
+  <div class="collapse ms-2" id="searchCollapse">
+    <input type="text" class="form-control border-0 border-bottom rounded-0 shadow-none" placeholder="Search..." style="width: 200px;">
+  </div>
+</div>
+
             </div>
-    
-            <!-- Logo (Centered) -->
-            <div class="logo-container text-center flex-grow-1">
+
+            <!-- Center Logo -->
+            <!-- <div class="col text-center">
                 <h2 id="logo-text" class="mb-0 fw-bold">HARRY CLINTON</h2>
-            </div> 
-    
+            </div> -->
+            <!-- Top Bar Logo (Black) -->
+<div class="col text-center">
+    <h2 id="logo-text" class="mb-0 fw-bold d-none">HARRY CLINTON</h2> <!-- d-none added -->
+  </div>
             <!-- Right Icons -->
-            <div class="d-flex align-items-center gap-3">
-                  <i class="bi bi-heart fs-4" style="cursor: pointer"></i>
+            <div class="col-auto d-flex align-items-center gap-3">
+                <i class="bi bi-heart fs-4" style="cursor: pointer"></i>
+
                 <span class="d-none d-md-inline fs-5" style="cursor: pointer">BESPOKE</span>
+                <i class="bi bi-cart fs-4" style="cursor: pointer"></i>
                 <!-- Profile Dropdown -->
+                <div class="dropdown">
+                    <i class="bi bi-person-circle fs-4" data-bs-toggle="dropdown" style="cursor: pointer;"></i>
+                    <ul class="dropdown-menu dropdown-menu-end p-3 shadow-lg rounded-3" style="min-width: 250px;">
+                        <!-- Profile Section -->
+                        <li class="text-center">
+                            <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded-circle mb-2" alt="Profile Avatar" width="60">
 
-    <i class="bi bi-person-circle fs-4" data-bs-toggle="dropdown" style="cursor: pointer;"></i>
-    
-    <ul class="dropdown-menu dropdown-menu-end p-3 shadow-lg rounded-3" style="min-width: 250px;">
-        <!-- Profile Section -->
-        <li class="text-center">
-            <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded-circle mb-2" alt="Profile Avatar" width="60">
-            <p class="fw-bold mb-1">Welcome, Guest</p>
-            <p class="text-muted small">Sign in to access your account</p>
-        </li>
-        
-        <!-- Sign In & Sign Up Buttons -->
-        <li class="text-center">
-            <a href="signIn.html" class="btn btn-dark btn-sm w-100 mb-2">Sign In</a>
-            <a href="signUp.html" class="btn btn-outline-dark btn-sm w-100">Sign Up</a>
-        </li>
+                            <p class="fw-bold mb-1">Welcome, Guest</p>
+                            <p class="text-muted small">Sign in to access your account</p>
+                        </li>
+                        <!-- Sign In & Sign Up Buttons -->
+                        <li class="text-center">
+                            <a href="signIn.html" class="btn btn-dark btn-sm w-100 mb-2">Sign In</a>
+                            <a href="signUp.html" class="btn btn-outline-dark btn-sm w-100">Sign Up</a>
+                        </li>
 
-        <hr class="dropdown-divider">
+                        <hr class="dropdown-divider">
 
-        <!-- Account Options -->
-        <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> My Profile</a></li>
-        <li><a class="dropdown-item" href="#"><i class="bi bi-bag"></i> My Orders</a></li>
-        <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Account Settings</a></li>
-        <li><a class="dropdown-item" href="#"><i class="bi bi-map"></i> Address Book</a></li>
-        <li><a class="dropdown-item" href="#"><i class="bi bi-wallet2"></i> Wallet</a></li>
-        <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-heart"></i> Saved Items</a></li>
-        <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-check"></i> My Appointments</a></li>
+                        <!-- Account Options -->
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> My Profile</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-bag"></i> My Orders</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Account Settings</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-map"></i> Address Book</a></li>
+                        
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-check"></i> My Appointments</a></li>
 
-        <hr class="dropdown-divider">
+                        <hr class="dropdown-divider">
 
-        <!-- Logout -->
-        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
-    </ul>
+                        <!-- Logout -->
+                        <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                    </ul>
+                </div>
             </div>
+
         </div>
-    </header>
+    </div>
+</header>
 
   <!-- Running Bar -->
 <div id="runningBar" class="running-bar bg-dark text-white d-flex align-items-center"> 
     <div class="marquee-container">
-        <span class="marquee">Soon,you can experience our offline store in Trichy & Chennai  </span>
+        <!-- <span class="marquee fw-normal text-light">Soon,you can experience our offline store in Trichy & Chennai</span> -->
+        <span class="marquee text-light" style="font-weight: 300; font-size: 0.9rem;">
+            Soon, you can experience our offline store in Trichy & Chennai
+          </span>
+                   
+
     </div>
     <button id="closeBar" class="close-btn">&times;</button>
 </div>
-
 <aside>
     <!-- Side-bar -->
     <div class="Hside-bar">
         <div class="Hcategory">
             <div class="Hcategory-item">
-                <span class="Hcategory-title">Men</span>
                 <div class="Hdropdown">
                    
                     <div class="Hdropdown-category">
-                        <strong>Men Categories</strong>
+                        <strong>Categories</strong>
                         <a href="#">Wedding Collections</a>
                         <a href="#">Business Formals</a>
                         <a href="#">Extreme Poppins</a>
@@ -120,34 +170,6 @@
                         <a href="#">88 Cigaettes</a>
                         <a href="#">Lucid Dreamer</a>
                         <a href="#">Linen</a>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="Hcategory-item">
-                <span class="Hcategory-title">Kids</span>
-                <div class="Hdropdown">
-                   
-                    <div class="Hdropdown-category">
-                        <strong>Kids Categories</strong>
-                        <a href="#">Suits</a>
-                        <a href="#">Shirts</a>
-                        <a href="#">Trouser</a>
-                        <a href="#">Indo-Western</a>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="Hcategory-item">
-                <span class="Hcategory-title">Accessories</span>
-                <div class="Hdropdown">
-                    
-                    <div class="Hdropdown-category">
-                        <strong>Accessories Categories</strong>
-                        <a href="#">Tie</a>
-                        <a href="#">Pocket Square</a>
-                        <a href="#">Cuff Links</a>
-                        <a href="#">Brooch</a>
                     </div>
                 </div>
             </div>
@@ -160,7 +182,7 @@
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="assets/image/demo.jpeg" class="d-block w-100" alt="Slide 1">
+                <img src="assets/image/16-8.jpeg" class="d-block w-100" alt="Slide 1">
                 <div class="carousel-caption d-block p-2">
                     <h1 class="text-white fw-bold">Your Fashion Reimagined</h1>
                 </div>
@@ -185,11 +207,10 @@
             <span class="carousel-control-next-icon"></span>
         </button>
     </div> 
-
-    <!-- Centered Logo -->
-    <div id="slider-logo">
-        <h1 id="logo-text-slider" class="text-white">HARRY CLINTON</h1>
-    </div>
+    <!-- Slider Logo (White) -->
+<div id="slider-logo" class="position-absolute top-50 start-50 translate-middle text-center">
+    <h1 id="logo-text-slider" class="text-white">HARRY CLINTON</h1>
+  </div>
 </section>
 
 <!-- Video Section with Mute/Unmute -->
@@ -206,10 +227,10 @@
     </div>
 </div>
 <!-- social media icons side bar -->
-<div class="position-fixed top-50 end-0 translate-middle-y bg-light shadow rounded-start-5 p-3 z-3" style="width: 50px;">
-    <ul class="list-unstyled mb-0">
+<!-- <div class="position-fixed top-50 end-0 translate-middle-y bg-light shadow rounded-start-5 p-3 z-3" style="width: 50px;">
+    <ul class="list-unstyled mb-0"> -->
         <!-- whatsapp -->
-        <li class="mb-3">
+        <!-- <li class="mb-3">
             <a href="#" class="d-flex align-items-center justify-content-center text-secondary fs-4 text-decoration-none">
                 <i class="bi bi-whatsapp"></i>
             </a>
@@ -247,7 +268,71 @@
             </a>
         </li>
     </ul>
+</div> -->
+
+<!-- Sidebar (Initially Hidden Off-Screen) -->
+<!-- <div id="socialSidebar" class="position-fixed top-50 end-0 translate-middle-y bg-light shadow rounded-start-5 p-2 z-3"
+     style="width: 50px; right: -60px; transition: all 0.3s ease;">
+    <ul class="list-unstyled mb-0"> -->
+        <!-- your social icons here -->
+    <!-- </ul>
+</div> -->
+
+<!-- Toggle Button (Chevron Icon Only Visible Initially) -->
+<!-- <button id="toggleSidebar" class="btn btn-light position-fixed top-50 translate-middle-y z-3 border rounded-start shadow"
+        style="right: 0; transition: all 0.3s ease;">
+    <i id="chevronIcon" class="fa-solid fa-chevron-left"></i>
+</button> -->
+<!-- Social Media Sidebar -->
+<div id="socialSidebar"
+class="position-fixed top-50 end-0 translate-middle-y bg-light shadow rounded-start-5 p-2 z-3"
+style="width: 45px; right: -60px !important; transition: right 0.3s ease;">
+  <ul class="list-unstyled mb-0">
+    <li class="mb-2">
+      <a href="#" class="d-flex align-items-center justify-content-center text-secondary fs-5 text-decoration-none">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </li>
+    <li class="mb-2">
+      <a href="#" class="d-flex align-items-center justify-content-center text-secondary fs-5 text-decoration-none">
+        <i class="bi bi-linkedin"></i>
+      </a>
+    </li>
+    <li class="mb-2">
+      <a href="#" class="d-flex align-items-center justify-content-center text-secondary fs-5 text-decoration-none">
+        <i class="bi bi-instagram"></i>
+      </a>
+    </li>
+    <li class="mb-2">
+      <a href="#" class="d-flex align-items-center justify-content-center text-secondary fs-5 text-decoration-none">
+        <i class="bi bi-facebook"></i>
+      </a>
+    </li>
+    <li class="mb-2">
+      <a href="#" class="d-flex align-items-center justify-content-center text-secondary fs-5 text-decoration-none">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+    </li>
+    <li class="mb-2">
+      <a href="#" class="d-flex align-items-center justify-content-center text-secondary fs-5 text-decoration-none">
+        <i class="bi bi-youtube"></i>
+      </a>
+    </li>
+    <li class="mb-2">
+      <a href="#" class="d-flex align-items-center justify-content-center text-secondary fs-5 text-decoration-none">
+        <i class="bi bi-pinterest"></i>
+      </a>
+    </li>
+  </ul>
 </div>
+
+<!-- Toggle Button -->
+<button id="toggleSidebar"
+        class="btn btn-light position-fixed top-50 translate-middle-y z-3 border rounded-start shadow"
+        style="right: 0; transition: right 0.3s ease;">
+  <i id="chevronIcon" class="fa-solid fa-chevron-left"></i>
+</button>
+
 <footer class="bg-dark text-light py-5">
     <div class="container">
         <div class="row">

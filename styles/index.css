@@ -22,6 +22,7 @@
   transition: opacity 0.6s ease-in-out;
 }
 
+
 #logo-text-slider {
   font-size: 4rem;
   color: white;
@@ -29,10 +30,11 @@
 }
 
 /* Navbar Logo Scroll Effect */
-#top-bar {
+ #top-bar {
   transition: all 0.5s ease;
   z-index: 1000;
-}
+} 
+
 
 .logo-container {
   opacity: 0;
@@ -83,8 +85,8 @@
           background-color: black;
           transition: 0.4s ease-in-out;
           position: absolute;
-      }
-
+      } 
+    
       /* Default positions */
       .hamburger span:nth-child(1) { 
           top: 0;
@@ -137,7 +139,7 @@
   }
   /* Side-bar-start */
   .Hside-bar {
-    top: 7.6%;
+    top: 6.9%;
     width: 30vw;
     position: fixed;
     left: -30%;
@@ -163,11 +165,6 @@
   
     position: relative; 
   }
-  
-  
-  
-  
-  
   /* Category Items */
   .Hcategory span {
     flex: 1;
@@ -253,7 +250,7 @@
   .Hside-bar.active .Hcategory-item:first-child  .Hdropdown {
     display: block;
   }
-  
+ 
   @media (max-width: 1200px) {
     .Hside-bar, .Hdropdown {
         width: 30vw;
@@ -283,10 +280,12 @@
   
   @media (max-width: 480px) {
     .Hside-bar, .Hdropdown {
-        width: 80vw;
+        width: 60vw;
         left: -80vw;
     }
-  
+  .Hside-bar{
+    top: 5.9%;
+  }
     
   }
 /* Side-Bar Ends */
@@ -381,7 +380,7 @@
 /* Running Bar */
 .running-bar {
   position: fixed;
-  top: 45px;
+  top: 40px;
   width: 100%;
   z-index: 1000;
   display: flex;
