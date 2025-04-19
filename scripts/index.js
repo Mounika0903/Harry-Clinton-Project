@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-        // const topBar = document.getElementById("top-bar");
-        // const sliderLogo = document.getElementById("slider-logo");
-        
-        const sidebar = document.getElementById("socialSidebar");
-        const toggleBtn = document.getElementById("toggleSidebar");
+        // const sidebar = document.getElementById("socialSidebar");
+        // const toggleBtn = document.getElementById("toggleSidebar");
         const chevron = document.getElementById("chevronIcon");
       
         const topBar = document.getElementById("logo-text");
@@ -28,12 +25,64 @@ document.addEventListener("DOMContentLoaded", function () {
                 runningBar.style.opacity = "0"; // Smooth transition
                 runningBar.style.height = "0px"; // Collapse height
                 runningBar.style.overflow = "hidden"; // Prevents any remaining content visibility
+                
             });
         } else {
             console.error("Error: Close button or running bar not found!");
         }
-        
-      
+//         const closeBarBtn = document.getElementById("closeBar");
+// const runningBar = document.getElementById("runningBar");
+
+// if (closeBarBtn && runningBar) {
+//     closeBarBtn.addEventListener("click", function () {
+//         console.log("Close button clicked! Hiding running bar...");
+//         runningBar.classList.add("hide-bar");
+//     });
+// } else {
+//     console.error("Error: Close button or running bar not found!");
+// }
+
+      //Bespoke
+
+  const form = document.getElementById("appointmentForm");
+  const whatsappBtn = document.getElementById("whatsappBtn");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const date = document.getElementById("appointmentDate").value;
+    const time = document.getElementById("appointmentTime").value;
+
+    if (date && time) {
+      const message = `Hello, I'd like to book a Bespoke Tailoring appointment on ${date} at ${time}.`;
+      const whatsappUrl = `https://wa.me/<YOUR_PHONE_NUMBER>?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappUrl, "_blank");
+    }
+  });
+
+  // Optional: Dynamically update the WhatsApp link as user selects date/time
+  ["appointmentDate", "appointmentTime"].forEach(id => {
+    document.getElementById(id).addEventListener("change", () => {
+      const date = document.getElementById("appointmentDate").value;
+      const time = document.getElementById("appointmentTime").value;
+      if (date && time) {
+        const message = `Hello, I'd like to book a Bespoke Tailoring appointment on ${date} at ${time}.`;
+        whatsappBtn.href = `https://wa.me/<YOUR_PHONE_NUMBER>?text=${encodeURIComponent(message)}`;
+      }
+    });
+  });
+
+  document.getElementById('whatsappBtn').addEventListener('click', function () {
+    const date = document.getElementById('appointmentDate').value;
+    const time = document.getElementById('appointmentTime').value;
+    const message = `Hi! I'd like to book a bespoke tailoring appointment on ${date} at ${time}.`;
+
+    const encodedMsg = encodeURIComponent(message);
+    const phone = "916379689083"; // Replace number
+    this.href = `https://wa.me/${phone}?text=${encodedMsg}`;
+  });
+
 window.addEventListener("scroll", function () {
     if (window.scrollY > 100) {
         topBar.classList.remove("d-none");      // Show black text
@@ -106,9 +155,6 @@ window.addEventListener("scroll", function () {
         });
            
             let isOpen = false;
-          
-            // Initial state: sidebar hidden
-            // sidebar.style.right = "-60px";
             sidebar.style.setProperty("right", "-60px", "important");
 
             toggleBtn.style.right = "0";
@@ -132,4 +178,14 @@ window.addEventListener("scroll", function () {
               isOpen = !isOpen;
             });
           });
-          
+          document.querySelectorAll('.dropdown-menu .dropdown-item[data-bs-toggle="collapse"]').forEach(item => {
+            item.addEventListener('click', function (e) {
+              e.stopPropagation(); 
+            });
+
+      
+
+  });
+
+
+     

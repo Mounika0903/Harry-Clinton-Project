@@ -3,6 +3,7 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
+  /* margin-top: 40px; */
 }
 
 .carousel-inner img {
@@ -33,6 +34,8 @@
  #top-bar {
   transition: all 0.5s ease;
   z-index: 1000;
+  margin-top: 25px;
+  /* padding: 10px 10px; */
 } 
 
 
@@ -139,7 +142,7 @@
   }
   /* Side-bar-start */
   .Hside-bar {
-    top: 6.9%;
+    top: 10.5%;
     width: 30vw;
     position: fixed;
     left: -30%;
@@ -340,58 +343,36 @@
   transform: rotate(360deg);
 }
 
-/* Social Icons - Initially hidden */
-.c-social-icons {
-  position: absolute;
-  top: 120%; 
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  background-color:transparent;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  visibility: hidden; 
-  pointer-events: none; 
- 
-}
 
-.c-home:hover .c-social-icons {
-  opacity: 1;
-  visibility: visible;  
-  pointer-events: auto;
-}
+  /* Force modal to be on top of everything */
+  .modal-backdrop {
+    z-index: 1040 !important;
+  }
 
-.c-social-link{
-  color: black;
-  font-size: 20px;
-  padding: 10px;
-  text-decoration: none;
-  background-color: white;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .modal {
+    z-index: 1050 !important;
+  }
 
-/* new */
-/* Running Bar */
+  /* Optional: ensure modal is not hidden */
+  .modal.show {
+    display: block !important;
+    opacity: 1 !important;
+  }
+
+
 .running-bar {
   position: fixed;
-  top: 40px;
+  top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1050; /* Higher than navbar */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1px 1px;
+  padding: 1px 5px;
   overflow: hidden;
   height: 25px;
   background-color: black !important;
 }
-
 /* Marquee Container */
 .marquee-container {
   flex: 1;
